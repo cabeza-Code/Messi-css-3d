@@ -1,0 +1,185 @@
+*{
+ margin: 0;
+ padding: 0;
+ position: absolute;
+ perspective:-1000px;
+ transform-style: preserve-3d;
+ background-position:center;
+ background-size:100% 100%;
+ transform-origin:top;
+}
+
+body{
+position:relative;
+width: 100vw;
+height: 100vh; 
+/* background:#bfffff ; */
+ background-image:url(fondo.jpg);
+ background-size:150% 100% ;  
+ overflow:hidden;
+}
+
+.caja{
+ position: absolute;
+ width: 200px;
+ height: 400px;
+ /* background-image:url(ball.png);
+ background-size:100% 100% ;  */
+ margin: auto;
+ left:0;
+ right: 0;
+ top: 50px;
+ bottom: 0;
+ display:flex;
+ justify-content:center;
+ animation:girar 10s linear infinite;
+}
+
+@keyframes girar{
+ from{
+  transform:rotatey(0deg);
+ }
+ to{
+  transform:rotatey(360deg);
+ }
+}
+
+.cabeza,.frente,.nuca,.derecha,.izquierda{
+ border:solid 1px;
+ width: 100px;
+ height: 100px;
+}
+
+.frente{
+ transform:translatez(50px);
+ background-image:url(frente.png);
+}
+
+.nuca{
+ transform:translatez(-50px);
+ background-image:url(nuca.png);
+}
+
+.derecha{
+ left:-50px;
+ transform:rotatey(90deg);
+ background-image:url(nuca.png);
+}
+
+.izquierda{
+ right: -50px;
+ transform:rotatey(90deg);
+ background-image:url(nuca.png);
+}
+
+.cuerpo,.pecho,.espalda{
+ width: 100px;
+ height: 150px;
+ border:solid 1px;
+}
+
+.cuerpo{
+ top:100px;
+}
+
+.pecho{
+ transform:translatez(20px);
+ background-image:url(pecho.png);
+}
+
+.espalda{
+ transform:translatez(-20px) rotatey(180deg);
+ background-image:url(espalda.png);
+}
+
+.hombroizquierdo,.hombroderecho{
+ width: 40px;
+ height: 150px;
+ border:solid 1px;
+ transform:rotatey(90deg);
+ background-image:url(pecho.png);
+ left:80px;
+}
+
+.hombroderecho{
+ left: -20px;
+ background-image:url(pecho.png);
+}
+
+.pierna,.piefrente,.pieatras{
+ width: 50px;
+ height: 120px;
+ border:solid 1px;
+}
+
+.pierna{
+ top: 250px;
+ left: 50px;
+ transform:rotatex(25deg);
+}
+
+.piefrente{
+ transform:translatez(20px);
+ background-image:url(short.png);
+}
+
+.pieatras{
+ transform:translatez(-20px);
+ background-image:url(short.png);
+}
+
+.piederecha,.pieizquierdo{
+ width: 40px;
+ height: 120px;
+ border:solid 1px;
+ left: -20px;
+ transform:rotatey(90deg);
+ background-image:url(short.png);
+}
+
+.pieizquierdo{
+ left: 30px;
+}
+
+.dos{
+ left:100px;
+ transform:rotatex(-25deg);
+}
+
+.brazo,.brazofrente,.brazoatras,.brazoderecha,.brazoizquierda{
+ width: 40px;
+ height: 150px;
+ border:solid 1px;
+ background-image:url(brazo.png);
+}
+
+.brazo{
+ left: 10px;
+ top: 100px;
+ transform-origin:top;
+ transform:rotatez(15deg);
+}
+
+.brazofrente{
+ transform:translatez(20px);
+}
+
+.brazoatras{
+ transform:translatez(-20px);
+}
+
+.brazoderecha{
+ left:-20px;
+ transform:rotatey(90deg);
+}
+
+.brazoizquierda{
+ left:20px;
+ transform:rotatey(90deg);
+}
+
+.brazodos{
+ left:150px;
+ transform-origin:top;
+ transform:rotatez(-15deg);
+}
